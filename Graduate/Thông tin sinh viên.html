@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://sv.lttc.edu.vn/thong-tin-sinh-vien.html -->
+<html class="k-webkit k-webkit120"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin sinh viên</title>
+    <link rel="shortcut icon" href="https://media.lttc.edu.vn/Media/2_SVLYTC/Images/logo-lytc-3251f0b1dd-b-ed07819e1-e-e.png">
+    <link rel="stylesheet" type="text/css" href="./Thông tin sinh viên_files/main.css">
+    <link href="./Thông tin sinh viên_files/components.min.css" rel="stylesheet">
+    <link href="./Thông tin sinh viên_files/profile.min.css" rel="stylesheet">
+
+    <link href="./Thông tin sinh viên_files/tooltipster.bundle.css" rel="stylesheet">
+
+    <link href="./Thông tin sinh viên_files/kendo.common.min.css" rel="stylesheet">
+    <link href="./Thông tin sinh viên_files/kendo.cms.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./Thông tin sinh viên_files/style.css">
+    <link rel="stylesheet" type="text/css" href="./Thông tin sinh viên_files/base.css">
+    <link rel="stylesheet" type="text/css" href="./Thông tin sinh viên_files/responsive.css">
+    <link rel="stylesheet" type="text/css" href="./Thông tin sinh viên_files/chat.css">
+    <link rel="stylesheet" type="text/css" href="./Thông tin sinh viên_files/switch.css">
+
+
+    <script type="text/javascript" src="Thông%20tin%20sinh%20viên_files/jquery-3.4.1.min.js"></script>
+    <script src="Thông%20tin%20sinh%20viên_files/kendo.all.min.js"></script>
+    <script src="Thông%20tin%20sinh%20viên_files/kendo.timezones.min.js"></script>
+    <script src="Thông%20tin%20sinh%20viên_files/kendo.aspnetmvc.min.js"></script>
+
+
+    <script src="Thông%20tin%20sinh%20viên_files/jquery.unobtrusive-ajax.min.js"></script>
+    <link href="./Thông tin sinh viên_files/toastr.min.css" rel="stylesheet">
+    <script src="Thông%20tin%20sinh%20viên_files/toastr.min.js"></script>
+    <script src="Thông%20tin%20sinh%20viên_files/jquery.validate.min.js"></script>
+    <script src="Thông%20tin%20sinh%20viên_files/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="Thông%20tin%20sinh%20viên_files/jquery.cms.js"></script>
+    <script src="Thông%20tin%20sinh%20viên_files/jquery-cms-sv.js"></script>
+
+    <link href="./Thông tin sinh viên_files/jquery-confirm.min.css" rel="stylesheet">
+    <script src="Thông%20tin%20sinh%20viên_files/jquery-confirm.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<input id="UID" name="UID" type="hidden" value="24">
+<input id="CurrentLanguage" name="CurrentLanguage" type="hidden" value="">
+<div id="focus-overlay"></div>
+<div class="wrapper">
+
+    <style>
+        @keyframes bellmove {
+            from {
+                top: -8px;
+            }
+
+            to {
+                top: -5px;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="Thông%20tin%20sinh%20viên_files/langSpecial.js"></script>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="./Cổng%20thông%20tin%20sinh%20viên.html" title="">
+                        <img src="./Thông tin sinh viên_files/csv-cd-lytc5b88e4d7-a-e.png" style="max-height: 40px !important;">
+                    </a>
+                </div>
+                <div class="search-bar">
+                    <form action="https://sv.lttc.edu.vn/sinh-vien-tin-tuc-thong-bao-search.html">
+                        <input type="text" id="k" name="k" langid="header-search-placeholder" placeholder="Tìm kiếm..." required="">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+
+                <div class="menu-btn">
+                    <a href="javascript:location.reload()" title=""><i class="fa fa-bars"></i></a>
+                </div>
+
+                <div class="user-account dropdown">
+                    <div class="user-info" data-toggle="dropdown">
+                        <img class="user-account-img" src="https://drive.google.com/uc?export=view&id=1-uRJ2DBMdNmoQwi2tNMIuxvhVj08U_NJ" style="width: 30px;height: 30px;border-radius: 50% !important;object-fit: cover;">
+                        <a class="user-account-name" href="javascript:location.reload()" title="">Mai Văn Hiệp </a>
+                        <i class="fa fa-caret-down user-account-name-caret-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="user-account-info dropdown-menu pull-right">
+                        <ul class="us-links">
+                            <li><a href="javascript:location.reload()" title="">Thông tin cá nhân</a></li>
+                            <li><a title="" onclick="popupDoiMatKhau()">Đổi mật khẩu</a></li>
+                            <li><a href="https://sv.lttc.edu.vn/SinhVien/Logout" title="">Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu-top">
+                    <ul>
+                        <li>
+
+                            <a href="./Cổng%20thông%20tin%20sinh%20viên.html" title="">
+                                <span><i class="fa fa-home" aria-hidden="true"></i></span>
+                                Trang chủ
+                            </a>
+                        </li>
+
+                        <li>
+                            <a id="spanBell" href="https://sv.lttc.edu.vn/sinh-vien-tin-tuc-thong-bao.html" title="">
+                                <div id="tinTuc" lang="tin-tuc">
+                                    <i class="fa fa-bell-o" aria-hidden="true"></i>&nbsp;&nbsp;Tin tức
+                                </div>
+                            </a>
+                        </li>
+
+                        <script src="Thông%20tin%20sinh%20viên_files/lang.js"></script>
+                        <script>
+                            CheckNews();
+                            function CheckNews() {
+                                if (0 > 0) {
+                                    var html = '<span>' + $("#tinTuc").html() + '</span>' + '<span style=\"left: 7px;top: -7px;min-width:16px ;width:fit-content; max-width:20px ;animation: bellmove 0.5s 5;\" class=\"badge badge-danger\">' + 0 + '</span>';
+                                    $("#spanBell").html(html);
+                                }
+                            }
+                        </script>
+                    </ul>
+                    <div id="accordion-menu-mb" class="accordion-menu">
+                        <ul>
+                            <li><a href="https://sv.lttc.edu.vn/SinhVien/Logout" title=""><i class="fa fa-sign-out" aria-hidden="true"></i>Đăng xuất</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script>
+        function popupDoiMatKhau() {
+            $.ajax({
+                url: "/sinh-vien/doi-mat-khau.html",
+                type: 'GET',
+                dataType: 'html',
+                data: {
+                    LoaiDangNhap: parseInt(2),
+                },
+                success: function (data) {
+                    $('<div class="lightbox-backgrond" onclick="closePopup();"></div><div id="boxes" style="height: inherit !important;"><div id="dialog" class="window" style="height: inherit !important;position: fixed; width:500px; top: 40%; left: 50%; transform: translate(-50%, -50%); display: block;"><a onclick="closePopup()" class="closePopup agree"></a><div class="content" id="popup-content"></div></div></div>').appendTo(document.body);
+                    $('#boxes .content').html(data);
+                },
+            });
+        }
+
+        function closePopup() {
+            $('#mask').hide();
+            $('.window').hide();
+            $('#boxes').remove();
+            $('.lightbox-backgrond').remove();
+        };
+
+        function confirmDoiMatKhau() {
+            $.ajax({
+                url: "/sinh-vien/doi-mat-khau.html",
+                type: 'POST',
+                dataType: 'html',
+                data: {
+
+                },
+                success: function () {
+                    closePopup();
+                    location.reload();
+                },
+            });
+        };
+
+
+        function btnSwitchNgonNgu_Click(language) {
+            var tmp = {
+                pLanguage: language
+            };
+            $.ajax({
+                type: 'POST',
+                url: '/SinhVien/CapNhatNgonNguGiaoDien',
+                data: JSON.stringify(tmp),
+                contentType: 'application/json; charset=utf-8',
+                dataType: 'json',
+                success: function (msg) {
+                    location.reload();
+                },
+                error: function (msg) { }
+            });
+
+            //location.href = location.href;
+        };
+
+        //function CheckNews() {
+        //    if ($("#spanBell").length > 0) {
+        //        $.ajax({
+        //            url: "/SinhVienTinTuc/CheckNews",
+        //            type: "POST",
+        //            dataType: 'json',
+        //            success: function (data) {
+        //                if (data > 0) {
+        //                    var html = '<span>' + $("#tinTuc").html() + '</span>' + '<span style=\"left: 7px;top: -7px;min-width:16px ;width:fit-content; max-width:20px ;animation: bellmove 0.5s 5;\" class=\"badge badge-danger\">' + data +'</span>';
+        //                    $("#spanBell").html(html);
+        //                }
+        //            }
+        //        });
+        //    }
+        //}
+    </script>
+    <div class="main-content">
+        <div class="container" id="full-resize-table">
+            <div class="main-section-content" id="contnet">
+                <div class="row">
+
+
+                    <div class="col-md-2 hidden-xs">
+                        <div class="box-df p-0">
+                            <div id="accordion-menu" class="accordion-menu">
+                                <ul>
+                                    <li>
+                                        <a href="./Cổng%20thông%20tin%20sinh%20viên.html" title=""><i class="fa fa-home" aria-hidden="true"></i><span lang="menusinhvien-left-home">TRANG CHỦ</span></a>
+                                    </li>
+
+
+                                    <script type="text/javascript">
+                                        function openLienKet(e) {
+                                            window.open($(e).attr("data-link"), '_blank');
+                                        }
+                                    </script>        </ul>
+                            </div>
+                        </div>
+
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                var uid = $("#UID").val();
+                                if (uid === "21") {
+                                    $('#config-tool').attr('class', '');
+                                }
+                                if ("False" == "True") {
+                                    $('#config-tool').attr('class', '');
+                                }
+                            })
+                        </script>
+                        <script type="text/javascript" src="Thông%20tin%20sinh%20viên_files/lang.js"></script>
+
+                    </div>
+
+                    <div class="col-md-10 col-xs-12">
+                        <div class="box-df">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="portlet">
+                                        <div class="portlet portlet-body light">
+                                            <div class="profile-userpic">
+                                                <img src="https://drive.google.com/uc?export=view&id=1-uRJ2DBMdNmoQwi2tNMIuxvhVj08U_NJ" class="img-responsive" style="object-fit: cover;">
+                                            </div>
+
+                                            <br>
+                                            <div class="form-group">
+                                                <div class="control-label"><span lang="thongtinsinhvien-mssv">MSSV</span>: <b>20004691</b></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="control-label"><span lang="thongtinsinhvien-hovaten">Họ tên</span>: <b>Mai Văn Hiệp</b></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="control-label"><span lang="thongtinsinhvien-gioitinh">Giới tính</span>: <b>Nam</b></div>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="portlet">
+                                        <div class="portlet-title">
+                                            <div class="caption">
+                                                <span class="caption-subject  bold" lang="thongtinsinhvien-thongtinhocvan">Thông tin học vấn</span>
+                                            </div>
+                                        </div>
+                                        <div class="portlet-body">
+                                            <div class="col-md-12">
+                                                <form class="form-horizontal">
+                                                    <div class="form-body">
+                                                        <div class="form-group">
+                                                            <label class="col-md-3"><span lang="thongtinsinhvien-trangthai">Trạng thái</span>: <span class="bold">Đã tốt nghiệp</span></label>
+                                                            <label class="col-md-3"><span lang="thongtinsinhvien-mahoso">Mã hồ sơ</span>: <span class="bold">20C15658</span></label>
+                                                            <label class="col-md-6"><span lang="thongtinsinhvien-ngayvaotruong">Ngày vào trường</span>: <span class="bold">07/9/2020</span></label>
+
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-6"><span lang="thongtinsinhvien-lophoc">Lớp học</span>: <span class="bold">20C1-ĐCN1</span></label>
+                                                            <label class="col-md-6"><span lang="thongtinsinhvien-coso">Cơ sở</span>: <span class="bold">Trường Cao đẳng Lý Tự Trọng TPHCM</span></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-6"><span lang="thongtinsinhvien-bacdaotao">Bậc đào tạo</span>: <span class="bold">Cao đẳng</span></label>
+                                                            <label class="col-md-6"><span lang="thongtinsinhvien-loaidaotao">Loại hình đào tạo</span>: <span class="bold">Chính quy 2.5 năm</span></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-6"><span lang="thongtinsinhvien-khoa">Khoa</span>: <span class="bold">Khoa Điện - Điện tử</span></label>
+                                                            <label class="col-md-6"><span lang="thongtinsinhvien-nganh">Ngành</span>: <span class="bold">Điện công nghiệp</span></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-6"><span lang="thongtinsinhvien-chuyennganh">Chuyên ngành</span>: <span class="bold">Điện công nghiệp</span></label>
+                                                            <label class="col-md-6"><span lang="thongtinsinhvien-khoahoc">Khóa học</span>: <span class="bold">2020</span></label>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="col-md-12">
+                                    <div class="portlet">
+                                        <div class="portlet portlet-title light">
+                                            <div class="caption">
+                                                <span class="caption-subject bold" lang="thongtinsinhvien-thongtincanhan">Thông tin cá nhân</span>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="portlet portlet-body light">
+                                            <div class="form-horizontal">
+                                                <div class="form-body">
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 col-xs-12"><span lang="thongtinsinhvien-ngaysinh">Ngày sinh</span>: <span class="bold">28/02/2002</span></label>
+                                                            <label class="col-md-2 col-xs-12"><span lang="thongtinsinhvien-dantoc">Dân tộc</span>: <span class="bold">Kinh</span></label>
+                                                            <label class="col-md-3 col-xs-12"><span lang="thongtinsinhvien-tongiao">Tôn giáo</span>: <span class="bold">Không</span></label>
+                                                            <label class="col-md-3 col-xs-12"><span lang="thongtinsinhvien-khuvuc">Khu vực</span>: <span class="bold">KV1</span></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 col-xs-12"><span lang="thongtinsinhvien-socmnd">Số CMND</span>: <span class="bold">066202011172</span></label>
+                                                            <label class="col-md-2 col-xs-12"><span lang="thongtinsinhvien-ngaycap">Ngày cấp</span>: <span class="bold">31/05/2021</span></label>
+                                                            <label class="col-md-6 col-xs-12"><span lang="thongtinsinhvien-noicap">Nơi cấp</span>: <span class="bold">Đăk Lăk</span></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 col-xs-6"><span lang="thongtinsinhvien-doituong">Đối tượng</span>: <span class="bold"></span></label>
+                                                            <label class="col-md-8 col-xs-6"><span lang="thongtinsinhvien-dienchinhsach">Diện chính sách</span>: <span class="bold"></span></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 col-xs-6"><span lang="thongtinsinhvien-ngayvaodoan">Ngày vào Đoàn</span>: <span class="bold"></span></label>
+                                                            <label class="col-md-8 col-xs-6"><span lang="thongtinsinhvien-ngayvaodang">Ngày vào Đảng</span>: <span class="bold"></span></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 col-xs-6"><span lang="thongtinsinhvien-sdt">Điện thoại</span>: <span class="bold">0379648499</span></label>
+                                                            <label class="col-md-8 col-xs-6"><span lang="thongtinsinhvien-email">Email</span>: <span class="bold"></span></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-12 col-xs-12"><span lang="thongtinsinhvien-diachilienlac">Địa chỉ liên hệ</span>: <span class="bold"></span></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-12 col-xs-12"><span lang="thongtinsinhvien-noisinh">Nơi sinh</span>: <span class="bold">Đắk Lắk</span></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-12 col-xs-12"><span lang="thongtinsinhvien-hktt">Hộ khẩu thường trú</span>: <span class="bold">Thôn Đoàn Kết, xã Ea D Rơng, huyện Cư Mgar, Đắk Lăk</span></label>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="portlet">
+                                        <div class="portlet portlet-title light">
+                                            <div class="caption">
+                                                <span class="caption-subject  bold" lang="thongtinsinhvien-qhgd">Quan hệ gia đình</span>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="portlet portlet-body light">
+                                            <div class="col-md-12">
+                                                <div class="form-horizontal">
+                                                    <div class="form-body">
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 col-xs-12"><span lang="thongtinsinhvien-gdhotenme">Họ tên Mẹ</span>: <span class="bold"> Nguyễn Thị Huyền</span></label>
+                                                            <label class="col-md-4 col-xs-12"><span lang="thongtinsinhvien-gdnamsinh">Năm sinh</span>: <span class="bold"> 1978</span></label>
+                                                            <label class="col-md-4 col-xs-12"><span lang="thongtinsinhvien-gdnghenghiep">Nghề nghiệp</span>: <span class="bold"> kế toán</span></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 col-xs-12"><span lang="thongtinsinhvien-quoctich">Quốc tịch</span>: <span class="bold"> </span></label>
+                                                            <label class="col-md-4 col-xs-12"><span lang="thongtinsinhvien-dantoc">Dân tộc</span>: <span class="bold"> </span></label>
+                                                            <label class="col-md-4 col-xs-12"><span lang="thongtinsinhvien-tongiao">Tôn giáo</span>: <span class="bold"> </span></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 col-xs-12"><span lang="thongtinsinhvien-coquan">Cơ quan công tác</span>: <span class="bold"> </span></label>
+                                                            <label class="col-md-4 col-xs-12"><span lang="thongtinsinhvien-chucvu">Chức vụ</span>: <span class="bold"> </span></label>
+                                                            <label class="col-md-4 col-xs-12">
+                                                                <span lang="thongtinsinhvien-gdsdt">Số điện thoại</span>: <span class="bold">
+                                                        0916878602                                                     </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-12 col-xs-12"><span lang="thongtinsinhvien-hokhau">Hộ khẩu</span>: <span class="bold"> </span></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-12 col-xs-12"><span lang="thongtinsinhvien-diachihiennay">Chỗ ở hiện nay</span>: <span class="bold"> </span></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 col-xs-12"><span lang="thongtinsinhvien-gdhotenanhtrai">Họ tên Anh trai</span>: <span class="bold"> Mai Văn Hậu</span></label>
+                                                            <label class="col-md-4 col-xs-12"><span lang="thongtinsinhvien-gdnamsinh">Năm sinh</span>: <span class="bold"> </span></label>
+                                                            <label class="col-md-4 col-xs-12"><span lang="thongtinsinhvien-gdnghenghiep">Nghề nghiệp</span>: <span class="bold"> nông dân</span></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 col-xs-12"><span lang="thongtinsinhvien-quoctich">Quốc tịch</span>: <span class="bold"> </span></label>
+                                                            <label class="col-md-4 col-xs-12"><span lang="thongtinsinhvien-dantoc">Dân tộc</span>: <span class="bold"> </span></label>
+                                                            <label class="col-md-4 col-xs-12"><span lang="thongtinsinhvien-tongiao">Tôn giáo</span>: <span class="bold"> </span></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-4 col-xs-12"><span lang="thongtinsinhvien-coquan">Cơ quan công tác</span>: <span class="bold"> </span></label>
+                                                            <label class="col-md-4 col-xs-12"><span lang="thongtinsinhvien-chucvu">Chức vụ</span>: <span class="bold"> </span></label>
+                                                            <label class="col-md-4 col-xs-12">
+                                                                <span lang="thongtinsinhvien-gdsdt">Số điện thoại</span>: <span class="bold">
+                                                        0379648499                                                     </span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-12 col-xs-12"><span lang="thongtinsinhvien-hokhau">Hộ khẩu</span>: <span class="bold"> </span></label>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label class="col-md-12 col-xs-12"><span lang="thongtinsinhvien-diachihiennay">Chỗ ở hiện nay</span>: <span class="bold"> </span></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script type="text/javascript" src="Thông%20tin%20sinh%20viên_files/lang.js"></script>
+                    <script>
+                        function XuatLyLichSinhVien() {
+                            $.ajax({
+                                url: "/SinhVien/InThongTinSinhVien",
+                                type: 'POST',
+                                data: {},
+                                dataType: 'json',
+                                beforeSend: function () {
+                                },
+                                success: function (e) {
+                                    toastr.remove();
+                                    var t = "";
+                                    if (e != null && e != "") {
+                                        if (e.Errors || e.errors) {
+                                            var a = void 0 == e.Errors ? e.errors : e.Errors;
+                                            a && ($.each(a, function (data, a) {
+                                                "errors" in a && $.each(a.errors, function () {
+                                                    t += this + "<br/>"
+                                                })
+                                            }), t = t.substr(0, t.lastIndexOf("<br/>")))
+                                        }
+                                        if (t != null && t != "") {
+                                            toastr.warning(t);
+                                        }
+                                        else {
+                                            window.location.href = "/SinhVien/DownloadThongTinSinhVien?p=" + e;
+                                        }
+
+                                    }
+                                    else {
+                                        $.error("Đã có lỗi xảy ra");
+                                    }
+                                }
+                            });
+                        }
+
+                        function CapNhatHinhSinhVien() {
+                            $.ajax({
+                                url: "/SinhVien/CapNhatHinhSinhVien",
+                                data: {
+                                },
+                                beforeSend: function () {
+                                    loadingMarkFull();
+                                },
+                                success: function (data) {
+                                    removeLoadingMarkFull();
+                                    $('<div id="popup-CapNhatHinhAnh"></div>').appendTo(document.body);
+                                    $('#popup-CapNhatHinhAnh').html(data);
+                                    var popup = $('#popup-CapNhatHinhAnh').kendoWindow({
+                                        visible: true,
+                                        resizable: false,
+                                        width: 600,
+                                        title: "Cập nhật hình ảnh",
+                                        modal: true,
+                                        deactivate: function () {
+                                            this.destroy();
+                                        }
+                                    }).data('kendoWindow');
+                                    popup.center();
+                                },
+                                async: true,
+                                beforeSend: function () {},
+                                complete: function () {},
+                            });
+                        }
+
+                        function removeLoadingMarkFull() {
+                            $('.k-loading-mask').remove();
+                        }
+
+                        function loadingMarkFull() {
+                            var html = '<div class="k-loading-mask" style="width: 100%;height: 100%;top: 0px;left: 0px;z-index: 99999999999999;display: block;background-color: #607d8b2b;position: fixed;bottom: 0px;"><i class="fa fa-spinner fa-pulse fa-3x fa-fw" style="position:absolute;top:10px;left:50%;color:#f73900;margin-top:20%;margin-left:-45px;font-size:90px;"></i></div>';
+                            $(html).appendTo(document.body);
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="Thông%20tin%20sinh%20viên_files/bootstrap.min.js"></script>
+<script type="text/javascript" src="Thông%20tin%20sinh%20viên_files/jquery.nicescroll.min.js"></script>
+<script src="Thông%20tin%20sinh%20viên_files/tooltipster.bundle.min.js"></script>
+<script type="text/javascript" src="Thông%20tin%20sinh%20viên_files/main.js"></script>
+
+
+
+
+
+
+
+</body></html>

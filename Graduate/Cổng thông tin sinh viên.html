@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html class="k-webkit k-webkit120"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cổng%20thông%20tin%20sinh%20viên</title>
+        <link rel="shortcut icon" href="https://media.lttc.edu.vn/Media/2_SVLYTC/Images/logo-lytc-3251f0b1dd-b-ed07819e1-e-e.png">
+    <link rel="stylesheet" type="text/css" href="./Cổng%20thông%20tin%20sinh%20viên_files/main.css">
+    <link href="./Cổng%20thông%20tin%20sinh%20viên_files/components.min.css" rel="stylesheet">
+    <link href="./Cổng%20thông%20tin%20sinh%20viên_files/profile.min.css" rel="stylesheet">
+
+    <link href="./Cổng%20thông%20tin%20sinh%20viên_files/kendo.common.min.css" rel="stylesheet">
+    <link href="./Cổng%20thông%20tin%20sinh%20viên_files/kendo.cms.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="./Cổng%20thông%20tin%20sinh%20viên_files/style.css">
+    <link rel="stylesheet" type="text/css" href="./Cổng%20thông%20tin%20sinh%20viên_files/base.css">
+    <link rel="stylesheet" type="text/css" href="./Cổng%20thông%20tin%20sinh%20viên_files/responsive.css">
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="Cổng%20thông%20tin%20sinh%20viên_files/highcharts.js"></script>
+    <script src="Cổng%20thông%20tin%20sinh%20viên_files/highcharts-more.js"></script>
+    <script src="Cổng%20thông%20tin%20sinh%20viên_files/solid-gauge.js"></script>
+
+    <script src="Cổng%20thông%20tin%20sinh%20viên_files/kendo.all.min.js"></script>
+    <script src="Cổng%20thông%20tin%20sinh%20viên_files/kendo.timezones.min.js"></script>
+    <script src="Cổng%20thông%20tin%20sinh%20viên_files/kendo.aspnetmvc.min.js"></script>
+
+    <script src="./Cổng%20thông%20tin%20sinh%20viên_files/jquery.unobtrusive-ajax.min.js"></script>
+    <link href="./Cổng%20thông%20tin%20sinh%20viên_files/toastr.min.css" rel="stylesheet">
+    <script src="Cổng%20thông%20tin%20sinh%20viên_files/toastr.min.js"></script>
+    <script src="Cổng%20thông%20tin%20sinh%20viên_files/jquery.validate.min.js"></script>
+    <script src="Cổng%20thông%20tin%20sinh%20viên_files/jquery.validate.unobtrusive.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .callnow {
+            position: fixed;
+            bottom: 100px;
+            right: 24px;
+            height: 70px;
+        }
+
+        #footer-hotline .container .copyright {
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <input data-val="true" data-val-number="The field Uid must be a number." id="UID" name="UID" type="hidden" value="24">
+    <input id="CurrentLanguage" name="CurrentLanguage" type="hidden" value="">
+    <div id="focus-overlay"></div>
+    <div class="wrapper">
+
+<style>
+    @keyframes bellmove {
+        from {
+            top: -8px;
+        }
+
+        to {
+            top: -5px;
+        }
+    }
+</style>
+<script type="text/javascript" src="Cổng%20thông%20tin%20sinh%20viên_files/langSpecial.js"></script>
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">
+                <a href="javascript:location.reload()" title="">
+                        <img src="./Cổng%20thông%20tin%20sinh%20viên_files/csv-cd-lytc5b88e4d7-a-e.png" style="max-height: 40px !important;">
+                </a>
+            </div>
+            <div class="search-bar">
+                <form action="https://sv.lttc.edu.vn/sinh-vien-tin-tuc-thong-bao-search.html">
+                    <input type="text" id="k" name="k" langid="header-search-placeholder" placeholder="Tìm kiếm..." required="">
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+            </div>
+
+            <div class="menu-btn">
+                <a href=".." title=""><i class="fa fa-bars"></i></a>
+            </div>
+
+            <div class="user-account dropdown">
+                <div class="user-info" data-toggle="dropdown" aria-expanded="true">
+                    <img class="user-account-img" src="https://drive.google.com/uc?export=view&id=1-uRJ2DBMdNmoQwi2tNMIuxvhVj08U_NJ" style="width: 30px;height: 30px;border-radius: 50% !important;object-fit: cover;">
+                                        <a class="user-account-name" href="." title="">Mai Văn Hiệp </a>
+                    <i class="fa fa-caret-down user-account-name-caret-down" aria-hidden="true"></i>
+                </div>
+                <div class="user-account-info dropdown-menu pull-right">
+                    <ul class="us-links">
+                        <li><a href="Thông%20tin%20sinh%20viên.html" title="">Thông tin cá nhân</a></li>
+                        <li><a title="" onclick="popupDoiMatKhau()">Đổi mật khẩu</a></li>
+                        <li><a href="https://sv.lttc.edu.vn/SinhVien/Logout" title="">Đăng xuất</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu-top">
+                <ul>
+                    <li>
+
+                        <a href="javascript:location.reload()" title="">
+                            <span><i class="fa fa-home" aria-hidden="true"></i></span>
+                            Trang chủ
+                        </a>
+                    </li>
+
+<li>
+    <a id="spanBell" href="https://sv.lttc.edu.vn/sinh-vien-tin-tuc-thong-bao.html" title="">
+        <div id="tinTuc" lang="tin-tuc">
+            <i class="fa fa-bell-o" aria-hidden="true"></i>&nbsp;&nbsp;Tin tức
+        </div>
+    </a>
+</li>
+
+<script type="text/javascript" src="Cổng%20thông%20tin%20sinh%20viên_files/lang.js"></script>
+<script>
+    CheckNews();
+    function CheckNews() {
+        if (0 > 0) {
+            var html = '<span>' + $("#tinTuc").html() + '</span>' + '<span style=\"left: 7px;top: -7px;min-width:16px ;width:fit-content; max-width:20px ;animation: bellmove 0.5s 5;\" class=\"badge badge-danger\">' + 0 + '</span>';
+            $("#spanBell").html(html);
+        }
+    }
+</script>
+                </ul>
+                <div id="accordion-menu-mb" class="accordion-menu">
+    <ul>
+        <li><a href="https://sv.lttc.edu.vn/SinhVien/Logout" title=""><i class="fa fa-sign-out" aria-hidden="true"></i>Đăng xuất</a></li>
+    </ul>
+</div>
+            </div>
+        </div>
+    </div>
+</header>
+<script>
+    function popupDoiMatKhau() {
+        $.ajax({
+            url: "/sinh-vien/doi-mat-khau.html",
+            type: 'GET',
+            dataType: 'html',
+            data: {
+                LoaiDangNhap: parseInt(2),
+            },
+            success: function (data) {
+                $('<div class="lightbox-backgrond" onclick="closePopup();"></div><div id="boxes" style="height: inherit !important;"><div id="dialog" class="window" style="height: inherit !important;position: fixed; width:500px; top: 40%; left: 50%; transform: translate(-50%, -50%); display: block;"><a onclick="closePopup()" class="closePopup agree"></a><div class="content" id="popup-content"></div></div></div>').appendTo(document.body);
+                $('#boxes .content').html(data);
+            },
+        });
+    }
+
+    function closePopup() {
+        $('#mask').hide();
+        $('.window').hide();
+        $('#boxes').remove();
+        $('.lightbox-backgrond').remove();
+    };
+
+    function confirmDoiMatKhau() {
+        $.ajax({
+            url: "/sinh-vien/doi-mat-khau.html",
+            type: 'POST',
+            dataType: 'html',
+            data: {
+
+            },
+            success: function () {
+                closePopup();
+                location.reload();
+            },
+        });
+    };
+
+
+    function btnSwitchNgonNgu_Click(language) {
+        var tmp = {
+            pLanguage: language
+        };
+        $.ajax({
+            type: 'POST',
+            url: '/SinhVien/CapNhatNgonNguGiaoDien',
+            data: JSON.stringify(tmp),
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            success: function (msg) {
+                location.reload();
+            },
+            error: function (msg) { }
+        });
+
+        //location.href = location.href;
+    };
+
+    //function CheckNews() {
+    //    if ($("#spanBell").length > 0) {
+    //        $.ajax({
+    //            url: "/SinhVienTinTuc/CheckNews",
+    //            type: "POST",
+    //            dataType: 'json',
+    //            success: function (data) {
+    //                if (data > 0) {
+    //                    var html = '<span>' + $("#tinTuc").html() + '</span>' + '<span style=\"left: 7px;top: -7px;min-width:16px ;width:fit-content; max-width:20px ;animation: bellmove 0.5s 5;\" class=\"badge badge-danger\">' + data +'</span>';
+    //                    $("#spanBell").html(html);
+    //                }
+    //            }
+    //        });
+    //    }
+    //}
+</script>
+
+
+
+<input id="WarningKSMode" name="WarningKSMode" type="hidden" value="0">
+
+<style>
+    .soluong {
+        font-size: 11px !important;
+        font-weight: 300;
+        height: 18px;
+        color: #fff;
+        -webkit-border-radius: 12px !important;
+        -moz-border-radius: 12px !important;
+        border-radius: 12px !important;
+        text-shadow: none !important;
+        text-align: center;
+        vertical-align: sub;
+        padding: 3px;
+        background: #eb2e51;
+    }
+
+    .shadow-danhhieu {
+        position: relative;
+        top: 8px;
+        left: -37px;
+        font-weight: bold;
+        color: #fdc106;
+        background-color: white;
+        text-shadow: 0px 0px 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 0px 0px 11px #000000;
+        font-size: 9px;
+    }
+
+    .span-danhhieusv {
+        margin-left: -14px;
+    }
+
+    .star-danhhieu {
+        margin-bottom: 5px;
+    }
+
+    #canvas_fireworks {
+        pointer-events: none !important;
+    }
+
+
+</style>
+<script type="text/javascript" src="Cổng%20thông%20tin%20sinh%20viên_files/jquery.fireworks.js"></script>
+<div class="main-content main-dashboard">
+    <input id="phao-hoa-danh-hieu-sinh-vien" name="phao-hoa-danh-hieu-sinh-vien" type="hidden" value="0">
+    <div class="container">
+        <div class="main-section-content" id="contnet">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="box-df profile-ds-info">
+                        <div class="portlet">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <span class="caption-subject bold" lang="db-thongtinsinhvien">Thông tin sinh viên</span>
+                                    </div>
+                                </div>
+
+                            <div class="portlet-body">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                            <div class="profile-userpic">
+                                                        <img src="https://drive.google.com/uc?export=view&id=1-uRJ2DBMdNmoQwi2tNMIuxvhVj08U_NJ" class="img-responsive" style="object-fit: cover;">
+
+                                            </div>
+
+                                        <div class="text-center">
+                                            <a href="./Thông%20tin%20sinh%20viên.html" class="color-active" lang="db-chitiet-button">Xem chi tiết</a>
+                                        </div>
+                                    </div>
+                                            <div class="col-sm-9">
+                                                <form class="form-horizontal">
+                                                    <div class="form-body">
+                                                        <div class="form-group" style="">
+                                                            <label class="col-xs-6"><span lang="sv-mssv">MSSV</span>: <span class="bold">20004691</span></label>
+                                                            <label class="col-xs-6"><span lang="sv-lophoc">Lớp học</span>: <span class="bold">20C1-ĐCN1</span></label>
+                                                        </div>
+                                                        <div class="form-group" style="">
+                                                            <label class="col-xs-6"><span lang="sv-hoten">Họ tên</span>: <span class="bold">Mai Văn Hiệp</span></label>
+                                                                <label class="col-xs-6"><span lang="sv-khoahoc">Khóa học</span>: <span class="bold">2020</span></label>
+                                                        </div>
+                                                        <div class="form-group" style="">
+                                                            <label class="col-xs-6"><span lang="sv-gioitinh">Giới tính</span>: <span class="bold">Nam</span></label>
+                                                            <label class="col-xs-6"><span lang="sv-hedaotao">Bậc đào tạo</span>: <span class="bold">Cao đẳng</span></label>
+                                                        </div>
+                                                        <div class="form-group" style="">
+                                                            <label class="col-xs-6">
+                                                                <span lang="sv-ngaysinh">Ngày sinh</span>: <span class="bold">28/02/2002</span>
+                                                            </label>
+                                                            <label class="col-xs-6"><span lang="sv-loaihinhdt">Loại hình đào tạo</span>: <span class="bold">Chính quy 2.5 năm</span></label>
+                                                        </div>
+                                                        <div class="form-group" style="">
+                                                            <label class="col-xs-6"><span lang="sv-noisinh">Nơi sinh</span>: <span class="bold">Đắk Lắk</span></label>
+                                                            <label class="col-xs-6"><span lang="sv-nganh">Ngành</span>: <span class="bold">Điện công nghiệp</span></label>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="portlet">
+                        <div class="portlet-body">
+                            <div class="box-menu row">
+
+
+                                <div class="col-xs-12">
+                                    <div class="item-box-menu box-df nhacnho-border">
+                                        <h3 class="name nhacnho-custom" lang="db-nhacnho">Nhắc nhở mới, chưa xem</h3>
+                                        <div class="desc clearfix">
+                                            <div class="number nhacnho-custom" style="width:110px !important;">0</div>
+                                            <div class="text-runing" style="width:100%; height:51px;">
+                                            </div>
+                                            <div class="icon-menu text-right">
+                                                <i class="icon fa fa-bell-o" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                        <div class="text-left">
+                                            <a href="https://sv.lttc.edu.vn/ghi-chu-nhac-nho-sinh-vien.html" class="color-active" lang="db-chitiet-button">Xem chi tiết</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a href="https://sv.lttc.edu.vn/lich-theo-tuan.html?pLoaiLich=1" class="color-active" title="">
+                                        <div class="item-box-menu box-df">
+                                            <h3 class="name" lang="db-lichhoctuan">Lịch học trong tuần</h3>
+                                            <div class="desc clearfix">
+                                                <div class="number">0</div>
+                                                <div class="icon-menu text-right">
+                                                    <i class="icon fa fa-calendar" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="text-left" lang="db-chitiet-button">
+                                                Xem chi tiết
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <a href="https://sv.lttc.edu.vn/lich-theo-tuan.html?pLoaiLich=2" class="color-active" title="">
+                                        <div class="item-box-menu box-df">
+                                            <h3 class="name" lang="db-lichthituan">Lịch thi trong tuần</h3>
+                                            <div class="desc clearfix">
+                                                <div class="number">0</div>
+                                                <div class="icon-menu text-right">
+                                                    <i class="icon fa fa-calendar-check-o" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                            <div class="text-left" lang="db-chitiet-button">
+                                                Xem chi tiết
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+    <div class="featured">
+
+    </div>
+    <script type="text/javascript" src="Cổng%20thông%20tin%20sinh%20viên_files/lang.js"></script>
+
+
+            <div class="row chart-custom">
+                <div class="col-md-5">
+                    <div class="box-df">
+                        <div class="portlet">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <span class="caption-subject bold"><a href="https://sv.lttc.edu.vn/ket-qua-hoc-tap.html" lang="db-kqht">Kết quả học tập</a></span>
+                                </div>
+                                <div class="actions">
+                                    <select class="form-control" id="cboIDDotThongKeKQHT" langid="db-hocky-combobox" name="cboIDDotThongKeKQHT" placeholder="Chọn học kỳ"><option value="">Chọn học kỳ</option>
+<option selected="selected" value="25">HK1 (2023 - 2024)</option>
+<option value="24">HK2 (2022 - 2023)</option>
+<option value="23">HK1 (2022 - 2023)</option>
+<option value="22">HK2 (2021 - 2022)</option>
+<option value="21">HK1 (2021 - 2022)</option>
+<option value="20">HK2 (2020 - 2021)</option>
+<option value="19">HK1 (2020 - 2021)</option>
+</select>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div id="box-dashboard-thongke-ketquahoctap-theodot">
+
+                <div class="text-center">
+                    <img src="./Cổng%20thông%20tin%20sinh%20viên_files/tkkqht.png">
+                </div>
+
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="box-df">
+                        <div class="portlet">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <span class="caption-subject bold" lang="db-tiendohoctap">Tiến độ học tập</span>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+
+
+                                    <style>
+                                        text[text-anchor="end"] {
+                                            display: none !important;
+                                        }
+
+                                        .highcharts-button {
+                                            display: none !important;
+                                        }
+
+                                        path {
+                                            font-family: Arial;
+                                        }
+                                    </style>
+                                    <div>
+                                        <div id="chartThongTinTinChiDaHoc" data-highcharts-chart="0" style="overflow: hidden;"><div id="highcharts-zjlyu0h-0" dir="ltr" style="position: relative; overflow: hidden; width: 253px; height: 270px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; touch-action: manipulation; outline: none;" class="highcharts-container "><svg version="1.1" class="highcharts-root" style="font-family: Helvetica, Arial, sans-serif; font-size: 1rem;" xmlns="http://www.w3.org/2000/svg" width="253" height="270" viewBox="0 0 253 270" role="img" aria-label=""><desc>Created with Highcharts 11.0.1</desc><defs><filter id="highcharts-drop-shadow-0"><fedropshadow dx="1" dy="1" flood-color="#000000" flood-opacity="0.75" stdDeviation="2.5"></fedropshadow></filter><clippath id="highcharts-zjlyu0h-3-"><rect x="0" y="0" width="233" height="245" fill="none"></rect></clippath><clippath id="highcharts-zjlyu0h-4-"><rect x="0" y="0" width="233" height="622.1924250434586" fill="none"></rect></clippath></defs><rect fill="#ffffff" class="highcharts-background" filter="none" x="0" y="0" width="253" height="270" rx="0" ry="0"></rect><rect fill="none" class="highcharts-plot-background" x="10" y="10" width="233" height="245" filter="none"></rect><g class="highcharts-pane-group" data-z-index="0"><path fill="#EEE" d="M 126.5 21.591999999999985 A 110.90800000000002 110.90800000000002 0 1 1 126.3890920184846 21.592055453995357 M 126.41285801452362 45.35804357099636 A 87.14200000000001 87.14200000000001 0 1 0 126.5 45.35799999999999" class="highcharts-pane " stroke="#cccccc" stroke-width="0"></path><path fill="#EEE" d="M 126.5 46.34824999999999 A 86.15175 86.15175 0 1 1 126.41384826435858 46.348293075871396 M 126.4376142603976 70.1142811928724 A 62.38575000000001 62.38575000000001 0 1 0 126.5 70.11425" class="highcharts-pane " stroke="#cccccc" stroke-width="0"></path></g><g class="highcharts-grid highcharts-yaxis-grid highcharts-radial-axis-grid" data-z-index="1"></g><rect fill="none" class="highcharts-plot-border" data-z-index="1" stroke="#cccccc" stroke-width="0" x="10" y="10" width="233" height="245"></rect><g class="highcharts-axis highcharts-yaxis highcharts-radial-axis" data-z-index="2"><path fill="none" class="highcharts-axis-line" stroke="#333333" stroke-width="0" data-z-index="7" d="M 126.5 33.474999999999994 A 99.025 99.025 0 1 1 126.40097501650412 33.47504951249587 M 126.5 132.5 A 0 0 0 1 0 126.5 132.5"></path></g><g class="highcharts-series-group" data-z-index="3" filter="none"><g class="highcharts-series highcharts-series-0 highcharts-solidgauge-series highcharts-tracker" data-z-index="0.1" opacity="1" transform="translate(10,10) scale(1 1)" clip-path="url(#highcharts-zjlyu0h-4-)"><path fill="#2caffe" d="M 104.63972228558248 12.227980536598082 A 1.3582312719983463e-14 1.3582312719983463e-14 0 0 1 104.63972228558251 12.227980536598068 A 110.90800000000002 110.90800000000002 0 1 1 104.529456214636 12.23989594834093 A 1.3582312719983463e-14 1.3582312719983463e-14 0 0 1 104.529456214636 12.239895948340944 M 107.09457274007114 35.867061102267854 A 1.3582312719983463e-14 1.3582312719983463e-14 0 0 1 107.09457274007114 35.86706110226787 A 87.14200000000001 87.14200000000001 0 1 0 107.18121036724338 35.85769899304134" sweep-flag="0" stroke-linecap="round" stroke-linejoin="round" stroke="none" stroke-width="0" class="highcharts-point highcharts-color-0"></path></g><g class="highcharts-markers highcharts-series-0 highcharts-solidgauge-series" data-z-index="0.1" opacity="1" transform="translate(10,10) scale(1 1)" clip-path="none"></g><g class="highcharts-series highcharts-series-1 highcharts-solidgauge-series highcharts-tracker" data-z-index="0.1" opacity="1" transform="translate(10,10) scale(1 1)" clip-path="url(#highcharts-zjlyu0h-4-)"><path fill="#00e272" d="M 104.65464312780928 37.1664687907916 A 1.0550546487844298e-14 1.0550546487844298e-14 0 0 1 104.6546431278093 37.16646879079158 A 86.15175 86.15175 0 1 1 104.5693155335002 37.17835681245161 A 1.0550546487844298e-14 1.0550546487844298e-14 0 0 1 104.5693155335002 37.178356812451625 M 107.86053883460359 60.71536182970633 A 1.0550546487844298e-14 1.0550546487844298e-14 0 0 1 107.86053883460359 60.71536182970634 A 62.38575000000001 62.38575000000001 0 1 0 107.92232778220672 60.706753262297354" sweep-flag="0" stroke-linecap="round" stroke-linejoin="round" stroke="none" stroke-width="0" class="highcharts-point highcharts-color-0"></path></g><g class="highcharts-markers highcharts-series-1 highcharts-solidgauge-series" data-z-index="0.1" opacity="1" transform="translate(10,10) scale(1 1)" clip-path="none"></g></g><text x="127" text-anchor="middle" class="highcharts-title" data-z-index="4" style="color: rgb(51, 51, 51); font-size: 1.2em; font-weight: bold; fill: rgb(51, 51, 51);" y="25"></text><text x="127" text-anchor="middle" class="highcharts-subtitle" data-z-index="4" style="color: rgb(102, 102, 102); font-size: 0.8em; fill: rgb(102, 102, 102);" y="24"></text><text x="10" text-anchor="start" class="highcharts-caption" data-z-index="4" style="color: rgb(102, 102, 102); font-size: 0.8em; fill: rgb(102, 102, 102);" y="267"></text><g class="highcharts-legend highcharts-no-tooltip" data-z-index="7" visibility="hidden"><rect fill="none" class="highcharts-legend-box" rx="0" ry="0" stroke="#999999" stroke-width="0" filter="none" x="0" y="0" width="8" height="8"></rect><g data-z-index="1"><g></g></g></g><g class="highcharts-axis-labels highcharts-yaxis-labels highcharts-radial-axis-labels" data-z-index="7"></g><text x="243" class="highcharts-credits" text-anchor="end" data-z-index="8" y="265" style="cursor: pointer; color: rgb(153, 153, 153); font-size: 0.6em; fill: rgb(153, 153, 153);">Highcharts.com</text></svg></div></div>
+                                        <p style="color: #003f65;font-size: 14px;font-weight: bold;text-align: center;"> 100/100</p>
+                                    </div>
+                                    <script>
+
+        Highcharts.chart('chartThongTinTinChiDaHoc', {
+
+            chart: {
+                type: 'solidgauge',
+                height: '270px',
+                events: {
+                    //render: renderIcons
+                }
+            },
+            title: {
+                text: ''
+            },
+            tooltip: {
+                useHTML: true,
+                borderWidth: 0,
+                backgroundColor: 'none',
+                shadow: false,
+                style: {
+                    fontSize: '16px'
+                },
+                //pointFormat: '{series.name}',
+                pointFormat: '<p style="text-align:center !important; font-family: arial;">{series.name}<br><p style="text-align:center;display:block;font-size:2em; color: {point.color}; font-weight: bold">{point.y}%</p><p>',
+                positioner: function (labelWidth) {
+                    return {
+                        x: ((this.chart.chartWidth - labelWidth) / 2),
+                        y: (this.chart.plotHeight / 2) - 35
+                    };
+                }
+            },
+
+            pane: {
+                startAngle: 0,
+                endAngle: 360,
+                background: [{
+                    outerRadius: '112%',
+                    innerRadius: '88%',
+                    backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || '#EEE',
+                    borderWidth: 0
+                }, {
+                    outerRadius: '87%',
+                    innerRadius: '63%',
+                    backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || '#EEE',
+                    borderWidth: 0
+                }]
+            },
+
+            yAxis: {
+                min: 0,
+                max: 100,
+                lineWidth: 0,
+                tickPositions: []
+            },
+
+            plotOptions: {
+                solidgauge: {
+                    dataLabels: {
+                        enabled: false
+                    },
+                    linecap: 'round' ,
+                    stickyTracking: false,
+                    rounded: true
+                }
+            },
+
+            series: [{
+                name: 'Tổng: 100 t&#237;n chỉ' ,
+                data: [{
+                    color: Highcharts.getOptions().colors[0],
+                    radius: '112%',
+                    innerRadius: '88%',
+                    y: 100
+                }]
+            }, {
+                    name: 'Đ&#227; học: 100 t&#237;n chỉ',
+                data: [{
+                    color: Highcharts.getOptions().colors[2],
+                    radius: '87%',
+                    innerRadius: '63%',
+                    y: 100
+                }]
+            }]
+        });
+                                    </script>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="box-df">
+                        <div class="portlet">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <span class="caption-subject bold" lang="db-lhp">Lớp học phần</span>
+                                </div>
+                                <div class="actions">
+                                    <select class="form-control" id="cboIDDotForLHP" langid="db-hocky-combobox_1" name="cboIDDotForLHP" placeholder="Chọn học kỳ"><option value="">Chọn học kỳ</option>
+<option selected="selected" value="25">HK1 (2023 - 2024)</option>
+<option value="24">HK2 (2022 - 2023)</option>
+<option value="23">HK1 (2022 - 2023)</option>
+<option value="22">HK2 (2021 - 2022)</option>
+<option value="21">HK1 (2021 - 2022)</option>
+<option value="20">HK2 (2020 - 2021)</option>
+<option value="19">HK1 (2020 - 2021)</option>
+</select>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div id="box-dashboard-lophocphan-theodot">
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        var checkDanhHieuSinhVien = $("#phao-hoa-danh-hieu-sinh-vien").val();
+        if (checkDanhHieuSinhVien == "1") {
+            $('div.wrapper').fireworks();
+            $(window).click(function () {
+                $('div.wrapper').fireworks("destroy");
+            });
+            setTimeout(() => { $('div.wrapper').fireworks("destroy"); }, 30000);
+        }
+    });
+
+        $('#cboIDDotThongKeKQHT').on('change', function () {
+            $('#box-dashboard-thongke-ketquahoctap-theodot').html("");
+            $.ajax({
+                url: "/SinhVien/ThongKeKetQuaHocTapTheoDot?pIDDot=" + this.value,
+                type: 'GET',
+                dataType: 'html',
+                success: function (data) {
+                    $('#box-dashboard-thongke-ketquahoctap-theodot').html(data);
+        }
+    });
+});
+    $('#cboIDDotForLHP').on('change', function () {
+        $('#box-dashboard-lophocphan-theodot').html("");
+            $.ajax({
+                url: "/SinhVien/DanhSachLopHocPhanTheoDot?pIDDot=" + this.value,
+                type: 'GET',
+                dataType: 'html',
+                success: function (data) {
+                    $('#box-dashboard-lophocphan-theodot').html(data);
+                }
+            });
+    });
+
+    function popupCapNhatThongTinNganHang() {
+        $.ajax({
+            url: "sinh-vien/cap-nhat-thong-tin-ngan-hang.html",
+            type: 'GET',
+            dataType: 'html',
+            data: {
+
+            },
+            success: function (data) {
+                $('<div class="lightbox-backgrond" onclick="closePopup();"></div><div id="boxes" style="height: inherit !important;"><div id="dialog" class="window" style="height: inherit !important;position: fixed; width:500px; top: 40%; left: 50%; transform: translate(-50%, -50%); display: block;"><a onclick="closePopup()" class="closePopup agree"></a><div class="content" id="popup-content"></div></div></div>').appendTo(document.body);
+                $('#boxes .content').html(data);
+            },
+        });
+    }
+
+    function closePopup(){
+        $('#mask').hide();
+        $('.window').hide();
+        $('#boxes').remove();
+        $('.lightbox-backgrond').remove();
+    };
+
+    function popupWarningKhaoSat() {
+        window.location.href = '/sinh-vien/khao-sat.html';
+        closePopup();
+    };
+
+
+    function popupCapNhatHSSV() {
+        var url = '/ho-so-sinh-vien.html' + '?stringKeyCode=b_g52Tat42Gc1IvZmyxDquzkB0i8sJ3doWhCL_29n-A';
+        window.location.href = url;
+        closePopup();
+    };
+
+    function UpdateDaXemNhacNho() {
+        $.ajax({
+            url: "/SinhVien/UpdateNgayXemThongBaoNhacNho?pIDTBNN=" + 0,
+            type: 'POST',
+            dataType: 'html',
+            success: function (data) {
+                closePopup();
+                location.reload();
+            }
+        });
+    };
+
+    function CheckIgnoreThenClose() {
+        var isChecked = $('#chkIgnoreMsgKHS').is(":checked")
+        if (isChecked && isChecked == true) {
+            $.ajax({
+                url: "/SinhVien/UpdateCookiesCheckKhungHoSo",
+                type: 'POST',
+                success: function (data) {
+                    $('#boxesKHS').remove();
+                    location.reload();
+                }
+            });
+        }
+        $('#boxesKHS').remove();
+    }
+
+
+    function ClosePopupDenHanNopHocPhi() {
+        var isChecked = $('#chkIgnorePopupDenHanHocPhi').is(":checked")
+        if (isChecked && isChecked == true) {
+            $.ajax({
+                url: "/SinhVien/UpdateCookiesDenHanNopHocPhi",
+                type: 'POST',
+                success: function (data) {
+                    $('.popup-notify-hannophocphi').remove();
+                    //location.reload();
+                }
+            });
+        }
+        $('.popup-notify-hannophocphi').remove();
+    }
+
+    function IgnoreNhacNho() {
+        $.ajax({
+            url: "/SinhVien/UpdateCookiesIgnoreNhacNho?pIDNhacNhoEncrypted=" + "qOD4AsGAVmCsDBDBQqqxVw",
+            type: 'POST',
+            success: function (data) {
+                closePopup();
+                location.reload();
+            }
+        });
+    }
+
+    function confirmCapNhatThongTinNganHang() {
+        $.ajax({
+            url: "/sinh-vien/cap-nhat-thong-tin-ngan-hang.html",
+            type: 'POST',
+            dataType: 'html',
+            data: {
+
+                },
+            success: function () {
+                    closePopup();
+                    location.reload();
+                },
+        });
+    };
+
+    function CapNhatHinhSinhVien() {
+        $.ajax({
+            url: "/SinhVien/CapNhatHinhSinhVien",
+            data: {
+            },
+            beforeSend: function () {
+                loadingMarkFull();
+            },
+            success: function (data) {
+                removeLoadingMarkFull();
+                $('<div id="popup-CapNhatHinhAnh"></div>').appendTo(document.body);
+                $('#popup-CapNhatHinhAnh').html(data);
+                var popup = $('#popup-CapNhatHinhAnh').kendoWindow({
+                visible: true,
+                    resizable: false,
+                    width: 600,
+                    title: "Cập nhật hình ảnh",
+                    modal: true,
+                    deactivate: function () {
+                        this.destroy();
+                    }
+                }).data('kendoWindow');
+                popup.center();
+                },
+                async: true,
+                beforeSend: function () {},
+                complete: function () {},
+        });
+    }
+    function removeLoadingMarkFull() {
+        $('.k-loading-mask').remove();
+    }
+
+    function loadingMarkFull() {
+        var html = '<div class="k-loading-mask" style="width: 100%;height: 100%;top: 0px;left: 0px;z-index: 99999999999999;display: block;background-color: #607d8b2b;position: fixed;bottom: 0px;"><i class="fa fa-spinner fa-pulse fa-3x fa-fw" style="position:absolute;top:10px;left:50%;color:#f73900;margin-top:20%;margin-left:-45px;font-size:90px;"></i></div>';
+        $(html).appendTo(document.body);
+    }
+
+    $("#btnUpdate").on('click', function () {
+        $.ajax({
+            url: "/SinhVien/UpdateBHYT",
+            type: "POST",
+            data: {
+                param: {
+                    DsIDSoThuKhac: $("#DsIDSoThuKhac").val(),
+                    IDBHYT: $("#IDBaoHiem").val()
+                }
+            },
+            success: function (e) {
+                if (e.Error <= 0) {
+                    toastr.warning(e.Message, "Thông báo")
+                } else {
+                    toastr.success(e.Message, "Thông báo")
+                    $(".popup-update-bhyt").remove()
+
+                }
+            }
+        })
+    })
+</script>
+<script type="text/javascript" src="Cổng%20thông%20tin%20sinh%20viên_files/lang.js"></script>
+
+
+
+
+            <div id="config-tool" class="closed">
+                <a id="config-tool-cog">
+                    <img src="./Cổng%20thông%20tin%20sinh%20viên_files/menu2.png">
+                </a>
+                <div id="config-tool-options">
+                    <div class="box-df p-0">
+    <div id="accordion-menu" class="accordion-menu">
+        <ul>
+            <li>
+                <a href="javascript:location.reload()" title=""><i class="fa fa-home" aria-hidden="true"></i><span lang="menusinhvien-left-home">TRANG CHỦ</span></a>
+            </li>
+
+
+<script type="text/javascript">
+    function openLienKet(e) {
+        window.open($(e).attr("data-link"), '_blank');
+    }
+</script>        </ul>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var uid = $("#UID").val();
+        if (uid === "21") {
+            $('#config-tool').attr('class', '');
+        }
+        if ("False" == "True") {
+            $('#config-tool').attr('class', '');
+        }
+    })
+</script>
+<script type="text/javascript" src="Cổng%20thông%20tin%20sinh%20viên_files/lang.js"></script>
+
+
+                    <div class="changeColor">
+                        <ul class="theme-color">
+                            <li data-style="dashboard-default" class="color-default0 current"> </li>
+                            <li data-style="dashboard-primary-color" class="color-default"> </li>
+                            <li data-style="dashboard-two-color" class="color-default1"></li>
+                            <li data-style="dashboard-three-color" class="color-default2"></li>
+                            <li data-style="dashboard-four-color" class="color-default3"></li>
+                            <li data-style="dashboard-five-color" class="color-default4"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+    <div><input id="ASC-MC" name="ASC-MC" type="hidden" value="WEB-LTT"></div>
+
+    <script type="text/javascript" src="Cổng%20thông%20tin%20sinh%20viên_files/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Cổng%20thông%20tin%20sinh%20viên_files/jquery.nicescroll.min.js"></script>
+    <script src="Cổng%20thông%20tin%20sinh%20viên_files/tooltipster.bundle.min.js"></script>
+    <script type="text/javascript" src="Cổng%20thông%20tin%20sinh%20viên_files/main.js"></script>
+
+    
+
+</body></html>
