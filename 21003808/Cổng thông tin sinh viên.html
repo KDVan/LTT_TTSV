@@ -89,61 +89,66 @@
                 </div>
 
                 <div class="user-account dropdown">
-                    <div class="user-info" data-toggle="dropdown" aria-expanded="true">
-                        <img class="user-account-img"
-                             src="https://drive.google.com/uc?export=view&id=1-uRJ2DBMdNmoQwi2tNMIuxvhVj08U_NJ"
-                             style="width: 30px;height: 30px;border-radius: 50% !important;object-fit: cover;">
-                        <a class="user-account-name" href="." title="">Mai Văn Hiệp </a>
-                        <i class="fa fa-caret-down user-account-name-caret-down" aria-hidden="true"></i>
+
+                    <div class="user-account dropdown">
+                        <div class="user-info" data-toggle="dropdown">
+                            <img class="user-account-img"
+                                 src="https://drive.google.com/uc?export=view&id=1-uRJ2DBMdNmoQwi2tNMIuxvhVj08U_NJ"
+                                 style="width: 30px;height: 30px;border-radius: 50% !important;object-fit: cover;">
+                            <a class="user-account-name" href="javascript:location.reload()" title="">Nguyễn
+                                Dương Hồ Vũ </a>
+                            <i class="fa fa-caret-down user-account-name-caret-down" aria-hidden="true"></i>
+                        </div>
+                        <div class="user-account-info dropdown-menu pull-right">
+                            <ul class="us-links">
+                                <li><a href="https://sv.lttc.edu.vn/thong-tin-sinh-vien.html" title="">Thông tin cá
+                                    nhân</a></li>
+                                <li><a title="" onclick="popupDoiMatKhau()">Đổi mật khẩu</a></li>
+                                <li><a href="https://sv.lttc.edu.vn/SinhVien/Logout" title="">Đăng xuất</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="user-account-info dropdown-menu pull-right">
-                        <ul class="us-links">
-                            <li><a href="Thông%20tin%20sinh%20viên.html" title="">Thông tin cá nhân</a></li>
-                            <li><a title="" onclick="popupDoiMatKhau()">Đổi mật khẩu</a></li>
-                            <li><a href="https://sv.lttc.edu.vn/SinhVien/Logout" title="">Đăng xuất</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="menu-top">
-                    <ul>
-                        <li>
-
-                            <a href="javascript:location.reload()" title="">
-                                <span><i class="fa fa-home" aria-hidden="true"></i></span>
-                                Trang chủ
-                            </a>
-                        </li>
-
-                        <li>
-                            <a id="spanBell" href="https://sv.lttc.edu.vn/sinh-vien-tin-tuc-thong-bao.html" title="">
-                                <div id="tinTuc" lang="tin-tuc">
-                                    <i class="fa fa-bell-o" aria-hidden="true"></i>&nbsp;&nbsp;Tin tức
-                                </div>
-                            </a>
-                        </li>
-
-                        <script type="text/javascript" src="Cổng%20thông%20tin%20sinh%20viên_files/lang.js"></script>
-                        <script>
-                            CheckNews();
-
-                            function CheckNews() {
-                                if (0 > 0) {
-                                    var html = '<span>' + $("#tinTuc").html() + '</span>' + '<span style=\"left: 7px;top: -7px;min-width:16px ;width:fit-content; max-width:20px ;animation: bellmove 0.5s 5;\" class=\"badge badge-danger\">' + 0 + '</span>';
-                                    $("#spanBell").html(html);
-                                }
-                            }
-                        </script>
-                    </ul>
-                    <div id="accordion-menu-mb" class="accordion-menu">
+                    <div class="menu-top">
                         <ul>
-                            <li><a href="https://sv.lttc.edu.vn/SinhVien/Logout" title=""><i class="fa fa-sign-out"
-                                                                                             aria-hidden="true"></i>Đăng
-                                xuất</a></li>
+                            <li>
+
+                                <a href="javascript:location.reload()" title="">
+                                    <span><i class="fa fa-home" aria-hidden="true"></i></span>
+                                    Trang chủ
+                                </a>
+                            </li>
+
+                            <li>
+                                <a id="spanBell" href="https://sv.lttc.edu.vn/sinh-vien-tin-tuc-thong-bao.html"
+                                   title="">
+                                    <div id="tinTuc" lang="tin-tuc">
+                                        <i class="fa fa-bell-o" aria-hidden="true"></i>&nbsp;&nbsp;Tin tức
+                                    </div>
+                                </a>
+                            </li>
+
+                            <script src="./Cổng thông tin sinh viên_files/lang.js.download"></script>
+                            <script>
+                                CheckNews();
+
+                                function CheckNews() {
+                                    if (0 > 0) {
+                                        var html = '<span>' + $("#tinTuc").html() + '</span>' + '<span style=\"left: 7px;top: -7px;min-width:16px ;width:fit-content; max-width:20px ;animation: bellmove 0.5s 5;\" class=\"badge badge-danger\">' + 0 + '</span>';
+                                        $("#spanBell").html(html);
+                                    }
+                                }
+                            </script>
                         </ul>
+                        <div id="accordion-menu-mb" class="accordion-menu">
+                            <ul>
+                                <li><a href="https://sv.lttc.edu.vn/SinhVien/Logout" title=""><i class="fa fa-sign-out"
+                                                                                                 aria-hidden="true"></i>Đăng
+                                    xuất</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </header>
     <script>
         function popupDoiMatKhau() {
@@ -263,7 +268,7 @@
 
 
     </style>
-    <script type="text/javascript" src="Cổng%20thông%20tin%20sinh%20viên_files/jquery.fireworks.js"></script>
+    <script src="./Cổng thông tin sinh viên_files/jquery.fireworks.js.download"></script>
     <div class="main-content main-dashboard">
         <input id="phao-hoa-danh-hieu-sinh-vien" name="phao-hoa-danh-hieu-sinh-vien" type="hidden" value="0">
         <div class="container">
@@ -297,15 +302,15 @@
                                                 <div class="form-body">
                                                     <div class="form-group" style="">
                                                         <label class="col-xs-6"><span lang="sv-mssv">MSSV</span>: <span
-                                                                class="bold">20004691</span></label>
+                                                                class="bold">21003808</span></label>
                                                         <label class="col-xs-6"><span lang="sv-lophoc">Lớp học</span>:
-                                                            <span class="bold">20C1-ĐCN1</span></label>
+                                                            <span class="bold">21C1-ĐCN2</span></label>
                                                     </div>
                                                     <div class="form-group" style="">
                                                         <label class="col-xs-6"><span lang="sv-hoten">Họ tên</span>:
-                                                            <span class="bold">Mai Văn Hiệp</span></label>
+                                                            <span class="bold">Nguyễn Dương Hồ Vũ</span></label>
                                                         <label class="col-xs-6"><span lang="sv-khoahoc">Khóa học</span>:
-                                                            <span class="bold">2020</span></label>
+                                                            <span class="bold">2021</span></label>
                                                     </div>
                                                     <div class="form-group" style="">
                                                         <label class="col-xs-6"><span
@@ -317,14 +322,14 @@
                                                     <div class="form-group" style="">
                                                         <label class="col-xs-6">
                                                             <span lang="sv-ngaysinh">Ngày sinh</span>: <span
-                                                                class="bold">28/02/2002</span>
+                                                                class="bold">09/01/2003</span>
                                                         </label>
                                                         <label class="col-xs-6"><span lang="sv-loaihinhdt">Loại hình đào tạo</span>:
                                                             <span class="bold">Chính quy 2.5 năm</span></label>
                                                     </div>
                                                     <div class="form-group" style="">
                                                         <label class="col-xs-6"><span lang="sv-noisinh">Nơi sinh</span>:
-                                                            <span class="bold">Đắk Lắk</span></label>
+                                                            <span class="bold">Tây Ninh</span></label>
                                                         <label class="col-xs-6"><span lang="sv-nganh">Ngành</span>:
                                                             <span class="bold">Điện công nghiệp</span></label>
                                                     </div>
@@ -409,7 +414,7 @@
                 <div class="featured">
 
                 </div>
-                <script type="text/javascript" src="Cổng%20thông%20tin%20sinh%20viên_files/lang.js"></script>
+                <script type="text/javascript" src="./Cổng thông tin sinh viên_files/lang.js.download"></script>
 
 
                 <div class="row chart-custom">
@@ -425,22 +430,414 @@
                                         <select class="form-control" id="cboIDDotThongKeKQHT" langid="db-hocky-combobox"
                                                 name="cboIDDotThongKeKQHT" placeholder="Chọn học kỳ">
                                             <option value="">Chọn học kỳ</option>
+                                            <option value="26">HK2 (2023 - 2024)</option>
                                             <option selected="selected" value="25">HK1 (2023 - 2024)</option>
                                             <option value="24">HK2 (2022 - 2023)</option>
                                             <option value="23">HK1 (2022 - 2023)</option>
                                             <option value="22">HK2 (2021 - 2022)</option>
                                             <option value="21">HK1 (2021 - 2022)</option>
-                                            <option value="20">HK2 (2020 - 2021)</option>
-                                            <option value="19">HK1 (2020 - 2021)</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="portlet-body">
                                     <div id="box-dashboard-thongke-ketquahoctap-theodot">
 
-                                        <div class="text-center">
-                                            <img src="./Cổng%20thông%20tin%20sinh%20viên_files/tkkqht.png">
+                                        <style>
+                                            text[text-anchor="end"] {
+                                                display: none !important;
+                                            }
+
+                                            .highcharts-button {
+                                                display: none !important;
+                                            }
+                                        </style>
+                                        <div id="chartKetQuaTheoHocKy" style="height: 300px; overflow: hidden;"
+                                             data-highcharts-chart="0">
+                                            <div id="highcharts-05ust11-0" dir="ltr"
+                                                 style="position: relative; overflow: hidden; width: 446px; height: 300px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; touch-action: manipulation; outline: none;"
+                                                 class="highcharts-container ">
+                                                <svg version="1.1" class="highcharts-root"
+                                                     style="font-family: Helvetica, Arial, sans-serif; font-size: 1rem;"
+                                                     xmlns="http://www.w3.org/2000/svg" width="446" height="300"
+                                                     viewBox="0 0 446 300" role="img" aria-label="">
+                                                    <desc>Created with Highcharts 11.0.1</desc>
+                                                    <defs>
+                                                        <filter id="highcharts-drop-shadow-0">
+                                                            <fedropshadow dx="1" dy="1" flood-color="#000000"
+                                                                          flood-opacity="0.75"
+                                                                          stdDeviation="2.5"></fedropshadow>
+                                                        </filter>
+                                                        <clippath id="highcharts-05ust11-1-">
+                                                            <rect x="0" y="0" width="376" height="203"
+                                                                  fill="none"></rect>
+                                                        </clippath>
+                                                        <clippath id="highcharts-05ust11-4-">
+                                                            <rect x="0" y="0" width="376" height="203"
+                                                                  fill="none"></rect>
+                                                        </clippath>
+                                                    </defs>
+                                                    <rect fill="#ffffff" class="highcharts-background" filter="none"
+                                                          x="0" y="0" width="446" height="300" rx="0" ry="0"></rect>
+                                                    <rect fill="none" class="highcharts-plot-background" x="35" y="10"
+                                                          width="376" height="203" filter="none"></rect>
+                                                    <g class="highcharts-pane-group" data-z-index="0"></g>
+                                                    <g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1">
+                                                        <path fill="none" stroke="#e6e6e6" stroke-width="0"
+                                                              stroke-dasharray="none" data-z-index="1"
+                                                              class="highcharts-grid-line" d="M 222.5 10 L 222.5 213"
+                                                              opacity="1"></path>
+                                                        <path fill="none" stroke="#e6e6e6" stroke-width="0"
+                                                              stroke-dasharray="none" data-z-index="1"
+                                                              class="highcharts-grid-line" d="M 410.5 10 L 410.5 213"
+                                                              opacity="1"></path>
+                                                        <path fill="none" stroke="#e6e6e6" stroke-width="0"
+                                                              stroke-dasharray="none" data-z-index="1"
+                                                              class="highcharts-grid-line" d="M 34.5 10 L 34.5 213"
+                                                              opacity="1"></path>
+                                                    </g>
+                                                    <g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1">
+                                                        <path fill="none" stroke="#e6e6e6" stroke-width="1"
+                                                              stroke-dasharray="none" data-z-index="1"
+                                                              class="highcharts-grid-line" d="M 35 213.5 L 411 213.5"
+                                                              opacity="1"></path>
+                                                        <path fill="none" stroke="#e6e6e6" stroke-width="1"
+                                                              stroke-dasharray="none" data-z-index="1"
+                                                              class="highcharts-grid-line" d="M 35 172.5 L 411 172.5"
+                                                              opacity="1"></path>
+                                                        <path fill="none" stroke="#e6e6e6" stroke-width="1"
+                                                              stroke-dasharray="none" data-z-index="1"
+                                                              class="highcharts-grid-line" d="M 35 132.5 L 411 132.5"
+                                                              opacity="1"></path>
+                                                        <path fill="none" stroke="#e6e6e6" stroke-width="1"
+                                                              stroke-dasharray="none" data-z-index="1"
+                                                              class="highcharts-grid-line" d="M 35 91.5 L 411 91.5"
+                                                              opacity="1"></path>
+                                                        <path fill="none" stroke="#e6e6e6" stroke-width="1"
+                                                              stroke-dasharray="none" data-z-index="1"
+                                                              class="highcharts-grid-line" d="M 35 51.5 L 411 51.5"
+                                                              opacity="1"></path>
+                                                        <path fill="none" stroke="#e6e6e6" stroke-width="1"
+                                                              stroke-dasharray="none" data-z-index="1"
+                                                              class="highcharts-grid-line" d="M 35 9.5 L 411 9.5"
+                                                              opacity="1"></path>
+                                                    </g>
+                                                    <g class="highcharts-grid highcharts-yaxis-grid"
+                                                       data-z-index="1"></g>
+                                                    <rect fill="none" class="highcharts-plot-border" data-z-index="1"
+                                                          stroke="#cccccc" stroke-width="0" x="35" y="10" width="376"
+                                                          height="203"></rect>
+                                                    <g class="highcharts-axis highcharts-xaxis" data-z-index="2">
+                                                        <path fill="none" class="highcharts-axis-line" stroke="#333333"
+                                                              stroke-width="1" data-z-index="7"
+                                                              d="M 35 213.5 L 411 213.5"></path>
+                                                    </g>
+                                                    <g class="highcharts-axis highcharts-yaxis" data-z-index="2">
+                                                        <text x="25" data-z-index="7" text-anchor="middle"
+                                                              transform="translate(0,0) rotate(270 25 111.5)"
+                                                              class="highcharts-axis-title"
+                                                              style="color: rgb(84, 79, 197); font-size: 0.8em; fill: rgb(84, 79, 197);"
+                                                              y="111.5">Điểm TB lớp học phần
+                                                        </text>
+                                                        <path fill="none" class="highcharts-axis-line" stroke="#333333"
+                                                              stroke-width="0" data-z-index="7"
+                                                              d="M 35 10 L 35 213"></path>
+                                                    </g>
+                                                    <g class="highcharts-axis highcharts-yaxis" data-z-index="2">
+                                                        <text x="421" data-z-index="7" text-anchor="middle"
+                                                              transform="translate(0,0) rotate(90 421 111.5)"
+                                                              class="highcharts-axis-title"
+                                                              style="color: rgb(44, 175, 254); font-size: 0.8em; fill: rgb(44, 175, 254);"
+                                                              y="111.5">Điểm của bạn
+                                                        </text>
+                                                        <path fill="none" class="highcharts-axis-line" stroke="#333333"
+                                                              stroke-width="0" data-z-index="7"
+                                                              d="M 411 10 L 411 213"></path>
+                                                    </g>
+                                                    <path fill="none"
+                                                          class="highcharts-crosshair highcharts-crosshair-category"
+                                                          data-z-index="2" stroke="rgba(204,211,255,0.25)"
+                                                          stroke-width="188" d="M 128.5 10 L 128.5 213"
+                                                          style="pointer-events: none;" visibility="hidden"></path>
+                                                    <g class="highcharts-series-group" data-z-index="3" filter="none">
+                                                        <g class="highcharts-series highcharts-series-0 highcharts-column-series highcharts-tracker"
+                                                           data-z-index="0.1" opacity="1"
+                                                           transform="translate(35,10) scale(1 1)"
+                                                           clip-path="url(#highcharts-05ust11-4-)">
+                                                            <path fill="rgb(250,108,81)"
+                                                                  d="M 51.5 41.5 L 136.5 41.5 A 3 3 0 0 1 139.5 44.5 L 139.5 203.5 A 0 0 0 0 1 139.5 203.5 L 48.5 203.5 A 0 0 0 0 1 48.5 203.5 L 48.5 44.5 A 3 3 0 0 1 51.5 41.5 Z"
+                                                                  stroke="#ffffff" stroke-width="1" opacity="1"
+                                                                  filter="none" class="highcharts-point"></path>
+                                                            <path fill="#fa6c51"
+                                                                  d="M 239.5 20.5 L 324.5 20.5 A 3 3 0 0 1 327.5 23.5 L 327.5 203.5 A 0 0 0 0 1 327.5 203.5 L 236.5 203.5 A 0 0 0 0 1 236.5 203.5 L 236.5 23.5 A 3 3 0 0 1 239.5 20.5 Z"
+                                                                  stroke="#ffffff" stroke-width="1" opacity="1"
+                                                                  filter="none" class="highcharts-point"></path>
+                                                        </g>
+                                                        <g class="highcharts-markers highcharts-series-0 highcharts-column-series"
+                                                           data-z-index="0.1" opacity="1"
+                                                           transform="translate(35,10) scale(1 1)" clip-path="none"></g>
+                                                        <g class="highcharts-series highcharts-series-1 highcharts-spline-series"
+                                                           data-z-index="0.1" opacity="1"
+                                                           transform="translate(35,10) scale(1 1)"
+                                                           clip-path="url(#highcharts-05ust11-4-)">
+                                                            <path fill="none"
+                                                                  d="M 94 38.56999999999999 C 94 38.56999999999999 282 48.72 282 48.72"
+                                                                  class="highcharts-graph" data-z-index="1"
+                                                                  stroke="#fdcd56" stroke-width="1"
+                                                                  stroke-linejoin="round" stroke-linecap="round"
+                                                                  filter="none"></path>
+                                                            <path fill="none"
+                                                                  d="M 94 38.56999999999999 C 94 38.56999999999999 282 48.72 282 48.72"
+                                                                  data-z-index="2" class="highcharts-tracker-line"
+                                                                  stroke-linecap="round" stroke-linejoin="round"
+                                                                  stroke="rgba(192,192,192,0.0001)"
+                                                                  stroke-width="21"></path>
+                                                        </g>
+                                                        <g class="highcharts-markers highcharts-series-1 highcharts-spline-series highcharts-tracker"
+                                                           data-z-index="0.1" opacity="1"
+                                                           transform="translate(35,10) scale(1 1)" clip-path="none">
+                                                            <path fill="#fdcd56"
+                                                                  d="M 94 38.56999999999999 A 0 0 0 1 1 94 38.56999999999999 Z"
+                                                                  class="highcharts-halo highcharts-color-undefined"
+                                                                  data-z-index="-1" fill-opacity="0.25"
+                                                                  visibility="hidden"></path>
+                                                            <path fill="#fdcd56"
+                                                                  d="M 94 42.56999999999999 A 4 4 0 1 1 94.00399999933333 42.56999800000016 Z"
+                                                                  stroke="#ffffff" stroke-width="0" opacity="1"
+                                                                  class="highcharts-point"></path>
+                                                            <path fill="#fdcd56"
+                                                                  d="M 282 53 A 4 4 0 1 1 282.00399999933336 52.99999800000017 Z"
+                                                                  stroke="#ffffff" stroke-width="0" opacity="1"
+                                                                  class="highcharts-point"></path>
+                                                        </g>
+                                                    </g>
+                                                    <text x="223" text-anchor="middle" class="highcharts-title"
+                                                          data-z-index="4"
+                                                          style="color: rgb(51, 51, 51); font-size: 1.2em; font-weight: bold; fill: rgb(51, 51, 51);"
+                                                          y="25"></text>
+                                                    <text x="223" text-anchor="middle" class="highcharts-subtitle"
+                                                          data-z-index="4"
+                                                          style="color: rgb(102, 102, 102); font-size: 0.8em; fill: rgb(102, 102, 102);"
+                                                          y="24"></text>
+                                                    <text x="10" text-anchor="start" class="highcharts-caption"
+                                                          data-z-index="4"
+                                                          style="color: rgb(102, 102, 102); font-size: 0.8em; fill: rgb(102, 102, 102);"
+                                                          y="297"></text>
+                                                    <g class="highcharts-data-labels highcharts-series-0 highcharts-column-series highcharts-tracker"
+                                                       data-z-index="6" opacity="1"
+                                                       transform="translate(35,10) scale(1 1)">
+                                                        <g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined"
+                                                           data-z-index="1" filter="none" transform="translate(86,19)">
+                                                            <text x="5" data-z-index="1" y="16"
+                                                                  style="color: rgb(0, 0, 0); font-size: 0.7em; font-weight: bold; fill: rgb(0, 0, 0);">
+                                                                <tspan class="highcharts-text-outline" fill="#FFFFFF"
+                                                                       stroke="#FFFFFF" stroke-width="2px"
+                                                                       stroke-linejoin="round" style="">8
+                                                                    <tspan x="5" dy="0">​</tspan>
+                                                                </tspan>
+                                                                8
+                                                            </text>
+                                                        </g>
+                                                        <g class="highcharts-label highcharts-data-label highcharts-data-label-color-undefined"
+                                                           data-z-index="1" filter="none" transform="translate(274,-2)">
+                                                            <text x="5" data-z-index="1" y="16"
+                                                                  style="color: rgb(0, 0, 0); font-size: 0.7em; font-weight: bold; fill: rgb(0, 0, 0);">
+                                                                <tspan class="highcharts-text-outline" fill="#FFFFFF"
+                                                                       stroke="#FFFFFF" stroke-width="2px"
+                                                                       stroke-linejoin="round">9
+                                                                    <tspan x="5" dy="0">​</tspan>
+                                                                </tspan>
+                                                                9
+                                                            </text>
+                                                        </g>
+                                                    </g>
+                                                    <g class="highcharts-legend highcharts-no-tooltip" data-z-index="7"
+                                                       transform="translate(76,255)">
+                                                        <rect fill="none" class="highcharts-legend-box" rx="0" ry="0"
+                                                              stroke="#999999" stroke-width="0" filter="none" x="0"
+                                                              y="0" width="293" height="30"></rect>
+                                                        <g data-z-index="1">
+                                                            <g>
+                                                                <g class="highcharts-legend-item highcharts-column-series highcharts-color-undefined highcharts-series-0"
+                                                                   data-z-index="1" transform="translate(8,3)">
+                                                                    <text x="21" text-anchor="start" data-z-index="2"
+                                                                          style="color: rgb(51, 51, 51); cursor: pointer; font-size: 0.8em; text-decoration: none; fill: rgb(51, 51, 51);"
+                                                                          y="17">Điểm của bạn:
+                                                                    </text>
+                                                                    <rect x="2" y="6" rx="6" ry="6" width="12"
+                                                                          height="12" fill="#fa6c51"
+                                                                          class="highcharts-point"
+                                                                          data-z-index="3"></rect>
+                                                                </g>
+                                                                <g class="highcharts-legend-item highcharts-spline-series highcharts-color-undefined highcharts-series-1"
+                                                                   data-z-index="1"
+                                                                   transform="translate(132.1979217529297,3)">
+                                                                    <path fill="none" class="highcharts-graph"
+                                                                          stroke-width="1" stroke-linecap="round"
+                                                                          d="M 0.5 13 L 15.5 13"
+                                                                          stroke="#fdcd56"></path>
+                                                                    <path fill="#fdcd56"
+                                                                          d="M 8 17 A 4 4 0 1 1 8.003999999333336 16.99999800000017 Z"
+                                                                          class="highcharts-point" stroke="#ffffff"
+                                                                          stroke-width="0" opacity="1"></path>
+                                                                    <text x="21" y="17" text-anchor="start"
+                                                                          data-z-index="2"
+                                                                          style="color: rgb(51, 51, 51); cursor: pointer; font-size: 0.8em; text-decoration: none; fill: rgb(51, 51, 51);">
+                                                                        Điểm TB lớp học phần:
+                                                                    </text>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                    <g class="highcharts-axis-labels highcharts-xaxis-labels"
+                                                       data-z-index="7">
+                                                        <text x="129"
+                                                              style="color: rgb(51, 51, 51); cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);"
+                                                              text-anchor="middle" transform="translate(0,0)" y="240"
+                                                              opacity="1">Thực tập doanh nghiệp
+                                                        </text>
+                                                        <text x="317"
+                                                              style="color: rgb(51, 51, 51); cursor: default; font-size: 0.8em; fill: rgb(51, 51, 51);"
+                                                              text-anchor="middle" transform="translate(0,0)" y="240"
+                                                              opacity="1">Thực tập tốt nghiệp
+                                                        </text>
+                                                    </g>
+                                                    <g class="highcharts-axis-labels highcharts-yaxis-labels"
+                                                       data-z-index="7">
+                                                        <text x="20"
+                                                              style="color: rgb(84, 79, 197); cursor: default; font-size: 0.8em; fill: rgb(84, 79, 197);"
+                                                              text-anchor="end" transform="translate(0,0)" y="225"
+                                                              opacity="1">0
+                                                        </text>
+                                                        <text x="20"
+                                                              style="color: rgb(84, 79, 197); cursor: default; font-size: 0.8em; fill: rgb(84, 79, 197);"
+                                                              text-anchor="end" transform="translate(0,0)" y="184"
+                                                              opacity="1">2
+                                                        </text>
+                                                        <text x="20"
+                                                              style="color: rgb(84, 79, 197); cursor: default; font-size: 0.8em; fill: rgb(84, 79, 197);"
+                                                              text-anchor="end" transform="translate(0,0)" y="144"
+                                                              opacity="1">4
+                                                        </text>
+                                                        <text x="20"
+                                                              style="color: rgb(84, 79, 197); cursor: default; font-size: 0.8em; fill: rgb(84, 79, 197);"
+                                                              text-anchor="end" transform="translate(0,0)" y="103"
+                                                              opacity="1">6
+                                                        </text>
+                                                        <text x="20"
+                                                              style="color: rgb(84, 79, 197); cursor: default; font-size: 0.8em; fill: rgb(84, 79, 197);"
+                                                              text-anchor="end" transform="translate(0,0)" y="63"
+                                                              opacity="1">8
+                                                        </text>
+                                                        <text x="20"
+                                                              style="color: rgb(84, 79, 197); cursor: default; font-size: 0.8em; fill: rgb(84, 79, 197);"
+                                                              text-anchor="end" transform="translate(0,0)" y="22"
+                                                              opacity="1">10
+                                                        </text>
+                                                    </g>
+                                                    <g class="highcharts-axis-labels highcharts-yaxis-labels"
+                                                       data-z-index="7"></g>
+                                                    <text x="436" class="highcharts-credits" text-anchor="end"
+                                                          data-z-index="8" y="295"
+                                                          style="cursor: pointer; color: rgb(153, 153, 153); font-size: 0.6em; fill: rgb(153, 153, 153);">
+                                                        Highcharts.com
+                                                    </text>
+                                                    <g class="highcharts-label highcharts-tooltip highcharts-color-undefined"
+                                                       data-z-index="8" filter="url(#highcharts-drop-shadow-0)"
+                                                       style="cursor: default; pointer-events: none;"
+                                                       transform="translate(135,22)" opacity="0" visibility="hidden">
+                                                        <path fill="#ffffff"
+                                                              class="highcharts-label-box highcharts-tooltip-box"
+                                                              d="M 3 0 L 184 0 A 3 3 0 0 1 187 3 L 187 55 A 3 3 0 0 1 184 58 L 3 58 A 3 3 0 0 1 0 55 L 0 3 A 3 3 0 0 1 3 0 Z"
+                                                              stroke-width="0" stroke="#fa6c51"></path>
+                                                        <text x="8" data-z-index="1" y="18"
+                                                              style="color: rgb(51, 51, 51); font-size: 0.8em; fill: rgb(51, 51, 51);">
+                                                            <tspan style="font-size: 0.8em;">Thực tập doanh nghiệp
+                                                            </tspan>
+                                                            <tspan class="highcharts-br" dy="15" x="8">​</tspan>
+                                                            <tspan style="color: rgb(250, 108, 81); fill: rgb(250, 108, 81);">
+                                                                ●
+                                                            </tspan>
+                                                            Điểm của bạn: :
+                                                            <tspan style="font-weight: bold;">8</tspan>
+                                                            <tspan class="highcharts-br" dy="15" x="8">​</tspan>
+                                                            <tspan style="color: rgb(253, 205, 86); fill: rgb(253, 205, 86);">
+                                                                ●
+                                                            </tspan>
+                                                            Điểm TB lớp học phần: :
+                                                            <tspan style="font-weight: bold;">8.1</tspan>
+                                                            <tspan class="highcharts-br">​</tspan>
+                                                        </text>
+                                                    </g>
+                                                </svg>
+                                            </div>
                                         </div>
+                                        <script>
+                                            Highcharts.chart('chartKetQuaTheoHocKy', {
+                                                chart: {
+                                                    zoomType: 'xy'
+                                                },
+                                                title: {
+                                                    text: ''
+                                                },
+                                                subtitle: {
+                                                    text: ''
+                                                },
+                                                xAxis: [{
+                                                    categories: ['Thực tập doanh nghiệp', 'Thực tập tốt nghiệp'],
+                                                    crosshair: true
+                                                }],
+                                                plotOptions: {
+                                                    column: {
+                                                        dataLabels: {
+                                                            enabled: true
+                                                        }
+                                                    }
+                                                },
+                                                yAxis: [{
+                                                    labels: {
+                                                        format: '{value}',
+                                                        style: {
+                                                            color: Highcharts.getOptions().colors[1]
+                                                        }
+                                                    },
+                                                    title: {
+                                                        text: 'Điểm TB lớp học phần',
+                                                        style: {
+                                                            color: Highcharts.getOptions().colors[1]
+                                                        }
+                                                    }
+                                                }, {
+                                                    title: {
+                                                        text: 'Điểm của bạn',
+                                                        style: {
+                                                            color: Highcharts.getOptions().colors[0]
+                                                        }
+                                                    },
+                                                    labels: {
+                                                        format: '{value}',
+                                                        style: {
+                                                            color: Highcharts.getOptions().colors[0]
+                                                        }
+                                                    },
+                                                    opposite: true
+                                                }],
+                                                tooltip: {
+                                                    shared: true
+                                                },
+                                                series: [{
+                                                    name: 'Điểm của bạn: ',
+                                                    type: 'column',
+                                                    color: '#fa6c51',
+                                                    data: [8.00, 9.00],
+                                                },
+                                                    {
+                                                        name: 'Điểm TB lớp học phần: ',
+                                                        color: '#fdcd56',
+                                                        type: 'spline',
+                                                        data: [8.100000, 7.600000],
+                                                    }]
+                                            });
+                                        </script>
 
 
                                     </div>
@@ -475,9 +872,9 @@
                                         }
                                     </style>
                                     <div>
-                                        <div id="chartThongTinTinChiDaHoc" data-highcharts-chart="0"
+                                        <div id="chartThongTinTinChiDaHoc" data-highcharts-chart="1"
                                              style="overflow: hidden;">
-                                            <div id="highcharts-zjlyu0h-0" dir="ltr"
+                                            <div id="highcharts-05ust11-9" dir="ltr"
                                                  style="position: relative; overflow: hidden; width: 253px; height: 270px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; touch-action: manipulation; outline: none;"
                                                  class="highcharts-container ">
                                                 <svg version="1.1" class="highcharts-root"
@@ -486,16 +883,16 @@
                                                      viewBox="0 0 253 270" role="img" aria-label="">
                                                     <desc>Created with Highcharts 11.0.1</desc>
                                                     <defs>
-                                                        <filter id="highcharts-drop-shadow-0">
+                                                        <filter id="highcharts-drop-shadow-1">
                                                             <fedropshadow dx="1" dy="1" flood-color="#000000"
                                                                           flood-opacity="0.75"
                                                                           stdDeviation="2.5"></fedropshadow>
                                                         </filter>
-                                                        <clippath id="highcharts-zjlyu0h-3-">
+                                                        <clippath id="highcharts-05ust11-12-">
                                                             <rect x="0" y="0" width="233" height="245"
                                                                   fill="none"></rect>
                                                         </clippath>
-                                                        <clippath id="highcharts-zjlyu0h-4-">
+                                                        <clippath id="highcharts-05ust11-13-">
                                                             <rect x="0" y="0" width="233" height="622.1924250434586"
                                                                   fill="none"></rect>
                                                         </clippath>
@@ -529,7 +926,7 @@
                                                         <g class="highcharts-series highcharts-series-0 highcharts-solidgauge-series highcharts-tracker"
                                                            data-z-index="0.1" opacity="1"
                                                            transform="translate(10,10) scale(1 1)"
-                                                           clip-path="url(#highcharts-zjlyu0h-4-)">
+                                                           clip-path="url(#highcharts-05ust11-13-)">
                                                             <path fill="#2caffe"
                                                                   d="M 104.63972228558248 12.227980536598082 A 1.3582312719983463e-14 1.3582312719983463e-14 0 0 1 104.63972228558251 12.227980536598068 A 110.90800000000002 110.90800000000002 0 1 1 104.529456214636 12.23989594834093 A 1.3582312719983463e-14 1.3582312719983463e-14 0 0 1 104.529456214636 12.239895948340944 M 107.09457274007114 35.867061102267854 A 1.3582312719983463e-14 1.3582312719983463e-14 0 0 1 107.09457274007114 35.86706110226787 A 87.14200000000001 87.14200000000001 0 1 0 107.18121036724338 35.85769899304134"
                                                                   sweep-flag="0" stroke-linecap="round"
@@ -542,7 +939,7 @@
                                                         <g class="highcharts-series highcharts-series-1 highcharts-solidgauge-series highcharts-tracker"
                                                            data-z-index="0.1" opacity="1"
                                                            transform="translate(10,10) scale(1 1)"
-                                                           clip-path="url(#highcharts-zjlyu0h-4-)">
+                                                           clip-path="url(#highcharts-05ust11-13-)">
                                                             <path fill="#00e272"
                                                                   d="M 104.65464312780928 37.1664687907916 A 1.0550546487844298e-14 1.0550546487844298e-14 0 0 1 104.6546431278093 37.16646879079158 A 86.15175 86.15175 0 1 1 104.5693155335002 37.17835681245161 A 1.0550546487844298e-14 1.0550546487844298e-14 0 0 1 104.5693155335002 37.178356812451625 M 107.86053883460359 60.71536182970633 A 1.0550546487844298e-14 1.0550546487844298e-14 0 0 1 107.86053883460359 60.71536182970634 A 62.38575000000001 62.38575000000001 0 1 0 107.92232778220672 60.706753262297354"
                                                                   sweep-flag="0" stroke-linecap="round"
@@ -689,19 +1086,70 @@
                                         <select class="form-control" id="cboIDDotForLHP" langid="db-hocky-combobox_1"
                                                 name="cboIDDotForLHP" placeholder="Chọn học kỳ">
                                             <option value="">Chọn học kỳ</option>
+                                            <option value="26">HK2 (2023 - 2024)</option>
                                             <option selected="selected" value="25">HK1 (2023 - 2024)</option>
                                             <option value="24">HK2 (2022 - 2023)</option>
                                             <option value="23">HK1 (2022 - 2023)</option>
                                             <option value="22">HK2 (2021 - 2022)</option>
                                             <option value="21">HK1 (2021 - 2022)</option>
-                                            <option value="20">HK2 (2020 - 2021)</option>
-                                            <option value="19">HK1 (2020 - 2021)</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="portlet-body">
                                     <div id="box-dashboard-lophocphan-theodot">
 
+                                        <div class="panel panel-admin">
+                                            <div class="panel-heading clearfix">
+                                                <span>Môn học/học phần</span>
+                                                <span class="text-center">Số tín chỉ</span>
+                                            </div>
+                                            <div class="panel-scroll border-scroll"
+                                                 style="overflow: hidden; outline: none;" tabindex="0">
+                                                <table class="table table-striped">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td width="80%">
+                                                            <div>
+                                                                <a href="https://sv.lttc.edu.vn/sinh-vien/page-lhp.html?g=b-TgL4ZwUzEHILacnncsUXaY_GyrUacKrcH27C_s_GVzcNAXPuY-W2JTf8BRdGM3UDHDrTr7D4k5BQg1UMTT2V38N71TQIEUHunVcyohHpSgADefj0kR7PONs8azDeVT"
+                                                                   class="color-active" data-bg="60348">
+                                                                    021100140502
+                                                                </a>
+                                                            </div>
+                                                            <div class="name">Thực tập tốt nghiệp</div>
+                                                        </td>
+                                                        <td width="20%">
+                                                            <div class="text-center">6</div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td width="80%">
+                                                            <div>
+                                                                <a href="https://sv.lttc.edu.vn/sinh-vien/page-lhp.html?g=7Rw9sYHy_9xxNzKqRC_yCnnOtp9taxbnA_QDKMv-CjzxYJqaB2wZgPvxG918gtAHQKhCVfUDKmsbHZ4PuG_BppEsPzO6wTD-dUqlVRCH7mWbrHejxlKJtTAA2-urL9QO"
+                                                                   class="color-active" data-bg="60349">
+                                                                    021100316002
+                                                                </a>
+                                                            </div>
+                                                            <div class="name">Thực tập doanh nghiệp</div>
+                                                        </td>
+                                                        <td width="20%">
+                                                            <div class="text-center">10</div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <script>
+                                            jQuery(document).ready(function ($) {
+                                                if ($('.border-scroll').length > 0) {
+                                                    $('.border-scroll').niceScroll({
+                                                        cursorborder: 'none',
+                                                        cursorcolor: '#999',
+                                                        autohidemode: 'leave'
+                                                    });
+                                                }
+                                            });
+                                        </script>
 
                                     </div>
                                 </div>
@@ -779,7 +1227,7 @@
 
 
         function popupCapNhatHSSV() {
-            var url = '/ho-so-sinh-vien.html' + '?stringKeyCode=b_g52Tat42Gc1IvZmyxDquzkB0i8sJ3doWhCL_29n-A';
+            var url = '/ho-so-sinh-vien.html' + '?stringKeyCode=GZ07CDyqsUFH8gMMBMa9ewbYMEZqpMp1YDgaWatRn24';
             window.location.href = url;
             closePopup();
         };
@@ -913,12 +1361,12 @@
             })
         })
     </script>
-    <script type="text/javascript" src="Cổng%20thông%20tin%20sinh%20viên_files/lang.js"></script>
+    <script type="text/javascript" src="./Cổng thông tin sinh viên_files/lang.js.download"></script>
 
 
     <div id="config-tool" class="closed">
         <a id="config-tool-cog">
-            <img src="./Cổng%20thông%20tin%20sinh%20viên_files/menu2.png">
+            <img src="./Cổng thông tin sinh viên_files/menu2.png">
         </a>
         <div id="config-tool-options">
             <div class="box-df p-0">
@@ -926,7 +1374,7 @@
                     <ul>
                         <li>
                             <a href="javascript:location.reload()" title=""><i class="fa fa-home"
-                                                                               aria-hidden="true"></i><span
+                                                                                        aria-hidden="true"></i><span
                                     lang="menusinhvien-left-home">TRANG CHỦ</span></a>
                         </li>
 
@@ -951,7 +1399,7 @@
                     }
                 })
             </script>
-            <script type="text/javascript" src="Cổng%20thông%20tin%20sinh%20viên_files/lang.js"></script>
+            <script type="text/javascript" src="./Cổng thông tin sinh viên_files/lang.js.download"></script>
 
 
             <div class="changeColor">
@@ -971,11 +1419,21 @@
 
 <div><input id="ASC-MC" name="ASC-MC" type="hidden" value="WEB-LTT"></div>
 
-<script type="text/javascript" src="Cổng%20thông%20tin%20sinh%20viên_files/bootstrap.min.js"></script>
-<script type="text/javascript" src="Cổng%20thông%20tin%20sinh%20viên_files/jquery.nicescroll.min.js"></script>
-<script src="Cổng%20thông%20tin%20sinh%20viên_files/tooltipster.bundle.min.js"></script>
-<script type="text/javascript" src="Cổng%20thông%20tin%20sinh%20viên_files/main.js"></script>
+<script type="text/javascript" src="./Cổng thông tin sinh viên_files/bootstrap.min.js"></script>
+<script type="text/javascript" src="./Cổng thông tin sinh viên_files/jquery.nicescroll.min.js"></script>
+<script src="./Cổng thông tin sinh viên_files/tooltipster.bundle.min.js"></script>
+<script type="text/javascript" src="./Cổng thông tin sinh viên_files/main.js"></script>
 
 
+<div id="ascrail2000" class="nicescroll-rails nicescroll-rails-vr"
+     style="width: 5px; z-index: auto; cursor: default; position: absolute; top: 445.135px; left: 1407.99px; height: 220px; touch-action: none; display: none;">
+    <div class="nicescroll-cursors"
+         style="position: relative; top: 0px; float: right; width: 5px; height: 0px; background-color: rgb(153, 153, 153); border: none; background-clip: padding-box; border-radius: 5px; touch-action: none;"></div>
+</div>
+<div id="ascrail2000-hr" class="nicescroll-rails nicescroll-rails-hr"
+     style="height: 5px; z-index: auto; top: 660.135px; left: 1064.33px; position: absolute; cursor: default; display: none;">
+    <div class="nicescroll-cursors"
+         style="position: absolute; top: 0px; height: 5px; width: 0px; background-color: rgb(153, 153, 153); border: none; background-clip: padding-box; border-radius: 5px;"></div>
+</div>
 </body>
 </html>
